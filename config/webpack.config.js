@@ -205,8 +205,10 @@ export default (webpackEnv) => {
         // Use path.resolve to ensure cross-platform compatibility (fixes Windows path issues)
         'monaco-editor': path.resolve(paths.appNodeModules, 'monaco-editor'),
         // This alias makes sure we're avoiding a runtime error related to this package
-        '@stoplight/ordered-object-literal$':
-          path.resolve(paths.appNodeModules, '@stoplight/ordered-object-literal/src/index.mjs'),
+        '@stoplight/ordered-object-literal$': path.resolve(
+          paths.appNodeModules,
+          '@stoplight/ordered-object-literal/src/index.mjs'
+        ),
         src: paths.appSrc,
       },
       plugins: [
